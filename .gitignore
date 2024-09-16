@@ -7,5 +7,6 @@ __pycache__/
 # Ignore any other files or directories that you don't want to track
 *.log
 *.tmp
+*.json
 
 *.sqlite3

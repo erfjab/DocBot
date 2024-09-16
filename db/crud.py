@@ -6,7 +6,7 @@ from datetime import datetime
 from typing import List, Optional
 import re
 
-async def create_or_update_user(chatid: int, username: Optional[str] = None) -> Users:
+async def upsert_user(chatid: int, username: Optional[str] = None) -> Users:
     async with GetDB() as db:
         stmt = select(Users).where(Users.chatid == chatid)
         result = await db.execute(stmt)
